@@ -1,5 +1,5 @@
 # Escolha a imagem base do Node.js
-FROM node:18.5
+FROM node:18.13
 
 # Crie o diretório da aplicação
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instale as dependências do projeto
-RUN npm install
+#RUN npm install
 
 # Copie o restante dos arquivos do projeto
 COPY . .
 
 # Expõe a porta na qual o aplicativo irá rodar
-EXPOSE 3000
+EXPOSE 8000
 
 # Comando para executar o aplicativo
 CMD [ "npm", "run", "start" ]
