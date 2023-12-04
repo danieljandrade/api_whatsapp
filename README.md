@@ -19,7 +19,7 @@ Thank you to [@pokearaujo](https://github.com/pokearaujo/multidevice) for writin
 The original repository had to be removed by the original author - we now continue development in this repository here.
 This is the only official repository and is maintained by the community.
 
-**Effective December 1st, a charge as defined will be implemented per Container ID. Payments should be made in USDT or BNB to the following wallet address: 0x330796a371bB24d9cbDa023dC09f6151c7a28F7f. Please include the Container ID in the post messages. This policy is in line with our study of introducing a $100 monthly charge per call via token, anticipated to begin in either Q4 2023 or Q1 2024.**
+**Effective December 1st, a charge as defined will be implemented per Container ID. Payments should be made in USDT or BNB to the following wallet address: 0x4d248A55E1C969f72252b89425834D89494fe6b2. Please include the Container ID in the post messages. This policy is in line with our study of introducing a $100 monthly charge per call via token, anticipated to begin in either Q4 2023 or Q1 2024.**
  
 ## Example
 
