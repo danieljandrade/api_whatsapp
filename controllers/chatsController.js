@@ -17,7 +17,7 @@ const send = async (req, res) => {
             return response(res, 400, false, 'The receiver number is not exists.')
         }
 
-        // await sendMessage(session, receiver, message, 0)
+        await sendMessage(session, receiver, message, 0)
 
         response(res, 200, true, 'The message has been successfully sent.')
         // response(res, 500, false, 'Failed to send the message. Please visit: https://github.com/danieljandrade/api-whatsapp#please-read')
