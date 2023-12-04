@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  api_whatsapp:
+    build: .
+    container_name: api_whatsapp
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - MAX_RETRIES=5
+      - RECONNECT_INTERVAL=5000
+    restart: unless-stopped
+    networks:
+      rede:
+        ipv4_address: 199.168.1.3
+    command: ["npm", "run", "start"]
+
+networks:
+  rede:
+    external: true
