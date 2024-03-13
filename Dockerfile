@@ -1,5 +1,5 @@
 # Escolha a imagem base do Node.js
-FROM node:18.13
+FROM node:20.11.1
 
 # Crie o diretório da aplicação
 WORKDIR /app
