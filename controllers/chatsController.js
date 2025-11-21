@@ -20,12 +20,21 @@ const send = async (req, res) => {
         await sendMessage(session, receiver, message, 0)
 
         response(res, 200, true, 'The message has been successfully sent.')
-        // response(res, 500, false, 'Failed to send the message. Please visit: https://github.com/danieljandrade/api-whatsapp#please-read')
+    } catch (err) {
+        console.error('Erro no send:', err)
 
-    } catch {
+        // se foi erro de conexão, avisa isso
+        const statusCode = err?.output?.statusCode
+        const msg = err?.output?.payload?.message
+
+        if (statusCode === 428 || msg === 'Connection Closed') {
+            return response(res, 500, false, 'WhatsApp session is not connected. Try again in a few seconds.')
+        }
+
         response(res, 500, false, 'Failed to send the message.')
     }
 }
+
 
 const sendBulk = async (req, res) => {
     const session = getSession(res.locals.sessionId)
